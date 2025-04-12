@@ -5,9 +5,10 @@
 
 'use strict';
 
-var fs = require('fs');
-var express = require('express');
-var app = express();
+const fs = require('fs');
+const express = require('express');
+const app = express();
+const PORT = 5000;
 
 if (!process.env.DISABLE_XORIGIN) {
   app.use(function(req, res, next) {
@@ -53,8 +54,9 @@ app.use(function(err, req, res, next) {
   }  
 })
 
-//Listen on port set in environment variable or default to 3000
-const listener = app.listen(process.env.PORT || 3000, function () {
+// Start the server and listen on the specified port
+const listener = app.listen(PORT, '0.0.0.0', () => {
   console.log("Node.js listening on port " + listener.address().port);
 });
+
 
