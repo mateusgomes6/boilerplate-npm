@@ -2,7 +2,11 @@
     "name": "fcc-learn-npm-package-json",
     "author": "Mateus Gomes",
     "description": "A project that does something awesome",
+    "keywords": ["freecodecamp", "related", "words"],
+    "license": "MIT",
+    "version": "1.2.0",
     "dependencies": {
+        "@freecodecamp/example": "1.0.0",
         "express": "^4.14.0"
     },
     "main": "server.js",
